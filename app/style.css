@@ -72,6 +72,8 @@ body {
 
 .digital-clock-wrapper {
   margin-top: 2rem;
+  border: 1px solid;
+  box-shadow: 2px 2px 15px #222;
 }
 
 .d-clock {
@@ -79,7 +81,7 @@ body {
   font-size: 60px;
   color: crimson;
   background: linear-gradient(to right, rgb(22, 22, 22), rgb(34, 34, 34));
-  padding: 0 10px;
+  padding: 0 5px;
 }
 
 .d-clock span {

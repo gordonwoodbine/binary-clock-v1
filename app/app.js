@@ -56,8 +56,6 @@ function setClock(unit, time) {
             led.classList.remove('lit');
         }
     });
-
-    
 }
 
 clock();
