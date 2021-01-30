@@ -92,3 +92,33 @@ body {
 .d-clock span:last-child {
   padding: 0 0 0 8px;
 }
+
+@media (max-width: 470px) {
+  .title {
+    font-size: 45px;
+  }
+
+  .led {
+    height: 25px;
+    width: 25px;
+  }
+
+  .d-clock {
+    font-size: 45px;
+  }
+}
+
+@media (max-width: 400px) {
+  .title {
+    font-size: 36px;
+  }
+
+  .led {
+    height: 15px;
+    width: 15px;
+  }
+
+  .d-clock {
+    font-size: 36px;
+  }
+}
