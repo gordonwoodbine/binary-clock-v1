@@ -6,33 +6,37 @@ function clock() {
     setClock('minutes', time);
     setClock('seconds', time);
 
-    
     setTimeout(clock, 500);
 }
 
 
 function setClock(unit, time) {
-    let timeUnit, div1, div2;
+    let timeUnit, div1, div2, digitalDiv;
     switch(unit) {
         case 'hours':
             timeUnit = time.getHours().toString();
             div1 = document.querySelectorAll('.hour-1');
             div2 = document.querySelectorAll('.hour-2');
+            digitalDiv = document.querySelector('.d-hours');
             break;
         case 'minutes':
             timeUnit = time.getMinutes().toString();
             div1 = document.querySelectorAll('.min-1');
             div2 = document.querySelectorAll('.min-2');
+            digitalDiv = document.querySelector('.d-mins');
             break;
         case 'seconds':
             timeUnit = time.getSeconds().toString();
             div1 = document.querySelectorAll('.sec-1');
             div2 = document.querySelectorAll('.sec-2');
+            digitalDiv = document.querySelector('.d-secs');
             break;
     }   
     if(timeUnit < 10) {
         timeUnit = '0' + timeUnit;
     }
+
+    digitalDiv.innerHTML = timeUnit;
 
     let timeUnit1 = Number(timeUnit[0]).toString(2).split('').reverse();
     let timeUnit2 = Number(timeUnit[1]).toString(2).split('').reverse();
